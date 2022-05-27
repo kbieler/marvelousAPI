@@ -1,0 +1,20 @@
+.hero-image{
+    background-image: linear-gradient(rgba(169, 216, 245, 0.5),rgba(12, 30, 74, 0.45)),url("#");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 30%;
+    position: relative;
+    height: 275px;
+    margin-top: 0px;
+}
+
+.hero-text{
+    color: rgb(244, 240, 246);
+    text-shadow: 3px 3px 5px rgb(12, 12, 12);
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 83px;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%)}
