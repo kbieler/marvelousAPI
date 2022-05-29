@@ -5,7 +5,7 @@ from werkzeug.security import check_password_hash
 from flask_login import login_user, current_user, login_required, logout_user
 
 
-auth = Blueprint('auth', '__name__', template_folder='auth_templates', url_prefix='/auth', static_folder='auth_static')
+auth = Blueprint('auth', __name__, template_folder='auth_templates', url_prefix='/auth', static_folder='auth_static')
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -40,8 +40,8 @@ def register():
         else:
             flash('Whoops! Passwords do not match. Please try again.', 'danger')
             return redirect(url_for('auth.register'))
-    elif request.method == 'GET':
-        return render_template('register.html', form=form)
+    
+    return render_template('register.html', form=form)
 
 
 @auth.route('/logout')

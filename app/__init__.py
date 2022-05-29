@@ -3,10 +3,12 @@ from config import Config
 from .auth.routes import auth
 from .models import db, login
 from flask_migrate import Migrate
+from .api.routes import api
 
 app = Flask(__name__)
 app.config.from_object(Config)
 app.register_blueprint(auth)
+app.register_blueprint(api)
 
 db.init_app(app)
 
@@ -19,4 +21,4 @@ login.login_message_category = 'danger'
 
 
 
-from . import routes
+from . import routes 
