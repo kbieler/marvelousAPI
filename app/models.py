@@ -47,7 +47,7 @@ class M_Character(db.Model):
     
 
     def __init__(self, alias, name, super_power, description='', comics_appear=''):
-        self.alias = alias
+        self.alias = alias.title()
         self.name = name.title()
         self.description = description
         self.comics_appear = comics_appear

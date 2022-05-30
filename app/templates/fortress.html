@@ -1,0 +1,16 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}Explore{% endblock title %}
+
+{% block header %}
+<div class="hero-image">
+    <div class="hero-text">
+       <p>“I can do this all day."</p>
+    </div>
+</div>
+{% endblock header%}
+
+{% block content%}  
+<h3>{{ "{}".format(current_user.first_name) }}'s Fortress of Supers</h3>
+
+{% endblock content %}

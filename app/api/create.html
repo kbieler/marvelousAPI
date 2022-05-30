@@ -1,0 +1,56 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}Create{% endblock title %}
+
+{% block header %}
+<div class="hero-image">
+    <div class="hero-text">
+       <p>“I can do this all day."</p>
+    </div>
+</div>
+{% endblock header%}
+
+{% block content%}  
+<form class="p-3" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <h3>Create A Super:</h3>
+        <fieldset>
+            {{ form.alias.label }}
+            {{ form.alias(class='form-control', placeholder='alias') }}
+        </fieldset>
+    </div>
+    <div class="form-group">
+        <fieldset>
+            {{ form.name.label }}
+            {{ form.name(class='form-control', placeholder='full (real) name') }}
+        </fieldset>
+    </div>
+    <div class="form-group">
+        <fieldset>
+            {{ form.description.label }}
+            {{ form.description(class='form-control', placeholder='description') }}
+        </fieldset>
+    </div>
+    <div class="form-group">
+        <fieldset>
+            {{ form.comics_appear.label }}
+            {{ form.comics_appear(class='form-control', placeholder='comic book appearances') }}
+        </fieldset>
+    </div>
+    <div class="form-group">
+        <fieldset>
+            {{ form.super_power.label }}
+            {{ form.super_power(class='form-control', placeholder='super power(s)') }}
+        </fieldset>
+    </div>
+    <div class="form-group">
+        <fieldset>
+            {{ form.owner.label }}
+            {{ form.owner(class='form-control', placeholder='your API token') }}
+        </fieldset>
+    </div>
+    {{ form.submit(class='btn btn-block btn-info') }}
+</form>
+
+{% endblock content%}
